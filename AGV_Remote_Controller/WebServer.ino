@@ -31,6 +31,15 @@ String webpage = R"rawliteral(
 <body>
   <h1>AGV Online</h1>
   <p>ESP32 Web Server Connected Successfully</p>
+
+  <button onclick="sendCmd('forward')">
+  Forward
+  </button>
+
+
+
+ 
+
 </body>
 </html>
 )rawliteral";
@@ -54,10 +63,36 @@ void initWebServer() {
   Serial.println(IP);
 
   server.on("/", handleRoot);
+  server.on("/forward", handleForward);
 
+
+
+  
+
+  
   server.begin();
 
   Serial.println("Web Server Started");
+}
+
+void handleForward() {
+  
+}
+
+void handleBackward() {
+
+}
+
+void handleLeft() {
+
+}
+
+void handleRight() {
+
+}
+
+void handleStop() {
+
 }
 
 // Handle Client
