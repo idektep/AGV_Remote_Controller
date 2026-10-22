@@ -1,9 +1,12 @@
+
 #include <WiFi.h>
 #include <WebServer.h>
 
 // ----------------------
 // Access Point Settings
 // ----------------------
+
+// กำหนดชื่อ WiFi และ Password
 const char* ssid = "______________";
 const char* password = "______________";
 
@@ -32,23 +35,30 @@ String webpage = R"rawliteral(
   <h1>AGV Online</h1>
   <p>ESP32 Web Server Connected Successfully</p>
 
+  <!-- ปุ่ม Forward (ตัวอย่าง) -->
   <button onclick="sendCmd('forward')">
-  Forward
+    Forward
   </button>
-<!-- backward -->
 
-<!-- left -->
-
-<!-- right -->
-
-<!-- stop -->
-
- 
-<script>
+  <!-- สร้างปุ่ม Backward -->
 
 
+  <!-- สร้างปุ่ม Left -->
 
-</script>
+
+  <!-- สร้างปุ่ม Right -->
+
+
+  <!-- สร้างปุ่ม Stop -->
+
+
+  <script>
+
+    // สร้างฟังก์ชัน JavaScript สำหรับส่งคำสั่ง
+
+    
+
+  </script>
 
 </body>
 </html>
@@ -72,36 +82,79 @@ void initWebServer() {
   Serial.print("AP IP Address: ");
   Serial.println(IP);
 
+  // Web Server Routes
   server.on("/", handleRoot);
   server.on("/forward", handleForward);
 
+  // เพิ่ม Route สำหรับ Backward
 
 
-  
+  // เพิ่ม Route สำหรับ Left
 
-  
+
+  // เพิ่ม Route สำหรับ Right
+
+
+  // เพิ่ม Route สำหรับ Stop
+
+
   server.begin();
 
   Serial.println("Web Server Started");
 }
 
+// ฟังก์ชันควบคุม AGV เดินหน้า
 void handleForward() {
-  
+
+  // คำสั่งเดินหน้า
+
+
+  // HTTP Response
+
+
 }
 
+// ฟังก์ชันควบคุม AGV ถอยหลัง
 void handleBackward() {
 
+  // คำสั่งถอยหลัง
+
+
+  // HTTP Response
+
+
 }
 
+// ฟังก์ชันควบคุม AGV เลี้ยวซ้าย
 void handleLeft() {
 
+  // คำสั่งเลี้ยวซ้าย
+
+
+  // HTTP Response
+
+
 }
 
+// ฟังก์ชันควบคุม AGV เลี้ยวขวา
 void handleRight() {
 
+  // คำสั่งเลี้ยวขวา
+
+
+  // HTTP Response
+
+
 }
 
+// ฟังก์ชันควบคุม AGV หยุด
 void handleStop() {
+
+  // คำสั่งหยุด
+
+
+  // HTTP Response
+
 
 }
 
