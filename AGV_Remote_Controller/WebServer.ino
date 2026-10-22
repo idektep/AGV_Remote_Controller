@@ -35,7 +35,10 @@ String webpage = R"rawliteral(
   <button onclick="sendCmd('forward')">
   Forward
   </button>
-
+  //backward
+  //left
+  //right
+  //stop
 
 
  
